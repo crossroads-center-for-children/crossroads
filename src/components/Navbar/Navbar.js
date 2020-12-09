@@ -8,6 +8,8 @@ import styles from './Navbar.module.scss';
 
 export default function Navbar() {
   const title = 'Crossroads Center for Children';
+
+  const links = ['Giving', 'About', 'Team', 'Classes', 'Events', 'Resources', 'Blog'];
   return (
     <Box>
       <Head>
@@ -20,20 +22,40 @@ export default function Navbar() {
           nonce='4OYMjj9U'></script>
       </Head>
       <header>
-        <AppBar style={{ backgroundColor: '#ffffff' }}>
-          <Box className={styles.box}>
-            <Image src='/cover2.svg' width='320' height='120' />
-            <Typography>Crossroads</Typography>
-            <div id='fb-root'>
-              <div
-                class='fb-login-button'
-                data-size='large'
-                data-button-type='login_with'
-                data-layout='rounded'
-                data-auto-logout-link='true'
-                data-use-continue-as='true'
-                data-width=''></div>
-            </div>
+        <AppBar>
+          <Box className={styles.main}>
+            <Link href='/'>
+              <a>
+                <Image src='/logo-text.svg' width='320' height='120' />
+              </a>
+            </Link>
+            <Box className={styles.right}>
+              <div id='fb-root'>
+                <div
+                  class='fb-login-button'
+                  data-size='large'
+                  data-button-type='login_with'
+                  data-layout='rounded'
+                  data-auto-logout-link='true'
+                  data-use-continue-as='true'
+                  data-width=''></div>
+              </div>
+
+              <Box className={styles.links}>
+                {links.map(link => (
+                  <Link href={`/${link.toLowerCase()}`}>
+                    <a>
+                      <Typography
+                        variant='body1'
+                        className={styles.link}
+                        style={{ fontSize: '1.75rem', margin: 8, fontWeight: 'bold' }}>
+                        {link}
+                      </Typography>
+                    </a>
+                  </Link>
+                ))}
+              </Box>
+            </Box>
           </Box>
         </AppBar>
       </header>

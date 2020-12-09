@@ -1,9 +1,31 @@
-.appbar {
-  background-color: white;
-}
+$text: #ffffff;
 
-.box {
+.main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  color: $text
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  margin: 10px;
+}
+
+.link {
+  margin-left: 10px;
+  font-weight: bold;
+  color: $text
 }
