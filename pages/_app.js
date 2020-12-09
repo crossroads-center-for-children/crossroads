@@ -8,7 +8,7 @@ import { Box } from '@material-ui/core';
 import Navbar from '../src/components/Navbar/Navbar';
 import { useApollo } from '../lib/apollo';
 import theme from '../src/theme';
-import '../styles/globals.css';
+import '../scss/globals.css';
 
 export default function MyApp({ Component, pageProps }) {
   const apolloClient = useApollo(pageProps.initialApolloState);
