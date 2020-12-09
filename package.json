@@ -21,6 +21,7 @@
     "next-sass": "^1.0.3",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-facebook": "^8.1.4",
     "react-tiny-link": "^3.6.0",
     "sass": "^1.30.0"
   }
