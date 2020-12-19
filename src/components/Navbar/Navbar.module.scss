@@ -1,10 +1,14 @@
-$text: #ffffff;
+@import "../../../scss/variables";
+
+$text: #414141;
 
 .main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  color: $text
+  background-color: white;
+  color: $text;
+  height: $navbarHeight;
 }
 
 .right {
@@ -21,7 +25,6 @@ $text: #ffffff;
   justify-content: space-between;
   align-items: flex-end;
   width: 100%;
-  margin: 10px;
 }
 
 .link {

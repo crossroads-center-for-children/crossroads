@@ -14,6 +14,7 @@ export default function Navbar() {
     <Box>
       <Head>
         <title>{title}</title>
+
         <script
           async
           defer
@@ -21,44 +22,43 @@ export default function Navbar() {
           src='https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0&appId=206050241131807&autoLogAppEvents=1'
           nonce='4OYMjj9U'></script>
       </Head>
-      <header>
-        <AppBar>
-          <Box className={styles.main}>
-            <Link href='/'>
-              <a>
-                <Image src='/logo-text.svg' width='320' height='120' />
-              </a>
-            </Link>
-            <Box className={styles.right}>
-              <div id='fb-root'>
-                <div
-                  class='fb-login-button'
-                  data-size='large'
-                  data-button-type='login_with'
-                  data-layout='rounded'
-                  data-auto-logout-link='true'
-                  data-use-continue-as='true'
-                  data-width=''></div>
-              </div>
 
-              <Box className={styles.links}>
-                {links.map(link => (
-                  <Link href={`/${link.toLowerCase()}`}>
-                    <a>
-                      <Typography
-                        variant='body1'
-                        className={styles.link}
-                        style={{ fontSize: '1.75rem', margin: 8, fontWeight: 'bold' }}>
-                        {link}
-                      </Typography>
-                    </a>
-                  </Link>
-                ))}
-              </Box>
+      <AppBar>
+        <Box className={styles.main}>
+          <Link href='/'>
+            <a>
+              <Image src='/logo-text.svg' width='320' height='120' />
+            </a>
+          </Link>
+          <Box className={styles.right}>
+            <div id='fb-root'>
+              <div
+                class='fb-login-button'
+                data-size='large'
+                data-button-type='login_with'
+                data-layout='rounded'
+                data-auto-logout-link='true'
+                data-use-continue-as='true'
+                data-width=''></div>
+            </div>
+
+            <Box className={styles.links}>
+              {links.map(link => (
+                <Link href={`/${link.toLowerCase()}`}>
+                  <a>
+                    <Typography
+                      variant='body1'
+                      className={styles.link}
+                      style={{ fontSize: '1.75rem', margin: 8, fontWeight: 'bold' }}>
+                      {link}
+                    </Typography>
+                  </a>
+                </Link>
+              ))}
             </Box>
           </Box>
-        </AppBar>
-      </header>
+        </Box>
+      </AppBar>
     </Box>
   );
 }
