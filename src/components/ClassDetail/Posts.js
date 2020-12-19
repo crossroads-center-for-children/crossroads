@@ -45,7 +45,7 @@ export default function About({ posts, pid }) {
               <Paper>
                 <Box>{post.cover ? <Image src={post.cover.url} layout='fill' /> : null}</Box>
                 <Typography variant='body1' style={{ fontFamily: 'Roboto', fontWeight: 'bold' }}>
-                  {post.Title}
+                  {post.title}
                 </Typography>
                 <ReactTimeAgo
                   date={post.date}

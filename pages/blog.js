@@ -4,6 +4,7 @@ import { Box, Button, Paper, Typography } from '@material-ui/core';
 import styles from '../scss/Blog.module.scss';
 import React from 'react';
 import { FacebookProvider, EmbeddedPost, Like, Page } from 'react-facebook';
+import Image from 'next/image';
 
 export default function Blog() {
   return (
@@ -16,6 +17,7 @@ export default function Blog() {
           width='500'
         />
 
+        <Image src='https://crossroads-center-for-children.s3.amazonaws.com/test-image7.jpg' layout='fill' />
         <Page href='https://www.facebook.com/crossroadscenterforchildren' />
       </FacebookProvider>
     </Box>

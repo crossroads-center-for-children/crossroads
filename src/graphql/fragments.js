@@ -70,7 +70,7 @@ export const collectionsFragment = gql`
     title
     posts {
       id
-      Title
+      title
     }
     cover {
       url
