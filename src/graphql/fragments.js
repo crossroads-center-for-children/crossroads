@@ -118,7 +118,7 @@ export const postsFragment = gql`
       }
     }
 
-    videos {
+    attachments {
       link
       tags {
         tag

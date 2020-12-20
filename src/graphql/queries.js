@@ -74,7 +74,7 @@ export const GET_CLASS = gql`
         ...PostsFragment
       }
 
-      videos(limit: 1) {
+      attachments(limit: 1) {
         title
         link
         tags {
